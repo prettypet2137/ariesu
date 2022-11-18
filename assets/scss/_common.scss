@@ -1,0 +1,203 @@
+@charset "utf-8";
+
+.page-wrapper {
+	max-width: 100%;
+	overflow: hidden;
+	background-color: #F6F6F6;
+
+	&.gray-background {
+		background-color: #F6F6F6;
+	}
+}
+
+.section {
+	&.section--mainview {
+		color: $color-section-title;
+		height: 100vh;
+		background: url(../img/bg1.jpg) no-repeat;
+		background-size: cover;
+	}
+	
+	&.section--medal {
+		color: $color-section-title;
+		height: calc(100vh - 150px);
+		background: url(../img/bg2.jpg) no-repeat;
+		background-size: cover;
+		padding: 20px 0px;
+		@include display-flex;
+		@include flex-direction-column;
+		align-content: stretch;
+		
+		.section__title {
+
+			h2 {
+				font: 48px/1.3 "YuGothic";
+				font-weight: bold;
+				margin-bottom: 40px;
+				text-align: center;
+				@media only screen and (max-width: 768px) {
+					font-size: 5.6vw;
+					line-height: 1.26;
+					margin-top: 16.26vw;
+					margin-bottom: 7.2vw;
+				}
+			}
+		}
+
+		.section__content {
+
+			.medal-list {
+				@include display-flex;
+				@include justify-content-flex-start;
+				list-style: none;
+				@media only screen and (max-width: 768px) {
+					@include flex-direction-column;
+				}
+				
+				.item {
+					width: 33.33%;
+					padding: 20px;
+					position: relative;
+					@media only screen and (max-width: 768px) {
+						width: 100%;
+					}
+
+					.item__medal {
+						height: 256px;
+						width: 100%;
+						overflow: hidden;
+						margin-bottom: 20px;
+						background: url(../img/medal.png) no-repeat;
+						background-size: cover;
+						@include display-flex;
+						@include justify-content-center;
+						@media only screen and (max-width: 768px) {
+							height: 26.66vw;
+							width: 40vw;
+						}
+
+						.img {
+							max-width: unset;
+							width: auto;
+							height: 100%;
+							display:none
+						}
+					}
+					
+					.item__content {
+						@media (max-width: 768px) {
+							height: 26.66vw;
+						} 
+
+						.description {
+							font-size: 16px;
+							font: 16px/1.3 "YuGothic";
+							font-weight: bold;
+							padding-left: 20px;
+							padding-right: 20px;
+							margin-top: 0.5em;
+							margin-bottom: 0.5em;
+							color: #0066C0;
+							display: -webkit-box;
+							-webkit-line-clamp: 1;
+							-webkit-box-orient: vertical;
+							overflow: hidden;
+							text-overflow: ellipsis;
+							@media only screen and (max-width: 768px) {
+								font-size: 3.2vw;
+								line-height: 1.5;
+								padding-left: 2.9vw;
+								padding-right: 2.9vw;
+								margin-top: 1.2vw;
+							}
+						}
+
+						.summary {
+							font-size: 12px;
+							font-weight: 600;
+							line-height: 1.35;
+							padding-left: 20px;
+							padding-right: 20px;
+							display: -webkit-box;
+							-webkit-line-clamp: 3;
+							-webkit-box-orient: vertical;
+							overflow: hidden;
+							text-overflow: ellipsis;
+
+							@media only screen and (max-width: 768px) {
+								font-size: 3.46vw;
+								padding-left: 4vw;
+								padding-right: 4vw;
+								margin-top: 2vw;
+								display: none;
+							}
+						}
+					}
+				}
+
+			}
+
+		}
+	}
+	
+	&.section--earth {
+		height: calc(100vh - 50px);
+		background: url(../img/bg3.jpg) no-repeat;
+		background-size: cover;
+		color: $color-section-title;
+		margin-top: 20px;
+		
+		.section__title {
+			position: absolute;
+			margin-top: -24px;
+			text-align: center;;
+
+			h2 {
+				font: 48px/1.3 "YuGothic";
+				font-weight: bold;
+				margin-bottom: 40px;
+				@media only screen and (max-width: 768px) {
+					font-size: 5.6vw;
+					line-height: 1.26;
+					margin-top: 16.26vw;
+					margin-bottom: 7.2vw;
+				}
+			}
+		}
+	}
+
+	&.section--store {
+		height: calc(300vh);
+		background: url(../img/bg4.jpg) no-repeat;
+		background-size: cover;
+		color: $color-section-content;
+		margin-top: 20px;
+	}
+
+	&.section--shopinfo {
+		height: calc(100vh);
+		background: url(../img/bg5.jpg) no-repeat;
+		background-size: cover;
+		color: $color-section-content;
+	}
+
+	&.section--industry {
+		height: calc(100vh);
+		background: url(../img/bg7.jpg) no-repeat;
+		background-size: cover;
+		color: $color-section-content;
+	}
+
+	&.section--overview {
+		background: url(../img/bg7.jpg) repeat;
+		background-size: cover;
+		color: $color-section-content;
+	}
+
+	&.section--qa {
+		background: url(../img/bg8.png) repeat;
+		background-size: cover;
+		color: $color-section-content;
+	}
+
+}
