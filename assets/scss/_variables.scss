@@ -1,8 +1,14 @@
 @charset "utf-8";
 
+@font-face {
+    font-family: "Hiragino Mincho";
+    src: url("../font/Hiragino Mincho ProN W3.otf") format("opentype");
+}
+
 /* 変数 */
 // フォント
 $font-default: "游ゴシック", YuGothic, "Yu Gothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", Arial, "メイリオ", Meiryo, sans-serif;
+$font-mainview: "Hiragino Mincho", "游ゴシック", YuGothic, "Yu Gothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", Arial, "メイリオ", Meiryo, sans-serif;
 
 // ベーシックカラー
 $color-white: #FFFFFF;
@@ -15,6 +21,7 @@ $color-gray5: #d3d3de;
 $color-gray6: #8f8f8f;
 $color-blue1: #173b63;
 $color-blue2: #54a8e5;
+$color-gold: #643e24;
 $color-red: #ef3623;
 $color-transparent: transparent;
 
@@ -171,6 +178,13 @@ $font-size-main-panel-title-sp: $font-size-xxxxxxxl-sp;
 	-moz-box-direction: normal;
 	-ms-flex-direction: column;
 	flex-direction: column;
+}
+
+@mixin flex-direction-column-reverse {
+	-webkit-box-direction: reverse;
+	-moz-box-direction: reverse;
+	-ms-flex-direction: column-reverse;
+	flex-direction: column-reverse;
 }
 
 @mixin flex-direction-row-reverse {

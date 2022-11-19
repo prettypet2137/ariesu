@@ -7,36 +7,15 @@
     right: 0;
     top: 0;
     z-index: 9;
-    height: 80px;
-    color: $color-header;
-	font-size: 20px;
-	@media only screen and (max-width: 768px) {
-		height: 50px;
-	}
-	background: transparent;
-    box-shadow: 0 0 4px 1px rgba(0,0,0,0.1);
 
 	.header-inner {
-		@include flex-center-v;
-		@include justify-content-space-between;
-		padding: 0 10%;
-		@media (min-width:769px) and (max-width: 1200px) {
-			padding: 0 3%;
-		}
-		@media only screen and (max-width: 768px) {
-			padding: 0 8vw;
-		}
+		width: 400px;
+		padding: 5% 10%;
 	}
 
 	.logo {
-		position: absolute;
-		right: 1.4vw;
-		margin-left: unset;
-		width: 220px;
-
-		img {
-			height: 5vw;
-		}
+		float: right;
+		img { display: inline; height: 5vw; }
 	}
 
 }
