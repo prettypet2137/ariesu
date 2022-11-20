@@ -276,7 +276,7 @@
 						font-size: 2.9vw;
 					}
 
-					&:before {
+					&::before {
 						content: "";
 						display: block;
 						position: absolute;
@@ -288,7 +288,7 @@
 						height: 8px;
 					}
 
-					&:after {
+					&::after {
 						content: "";
 						display: block;
 						position: absolute;
@@ -336,6 +336,71 @@
 				}
 			}
 		}
+		
+
+		.section_content {
+
+			padding: 5vw;
+
+			.content-wrapper {
+
+				margin: 3vh 0 10vh 0;
+
+				.header {
+					color: $color-section-title;
+					margin-left: 10vw;
+					font-size: 3.6vw;
+
+					h3 {
+						text-shadow: -1px 3px #bbb;
+
+						span { margin-left: 20px; }
+					}
+				}
+
+				.body {
+					@include display-flex;
+					@include flex-direction-row-reverse;
+					@include justify-content-flex-start;
+					@include align-items(stretch);
+
+					figure {
+						width: 20vw;
+
+						img {    
+							position: absolute;
+							right: -5vw;
+						}
+					}
+
+					.description {
+						width: 75vw;
+						@include display-flex;
+						@include align-items-flex-start;
+						@include flex-direction-column;
+						margin-top: 10vh;
+
+						p {
+							font-size: 2.1vw;
+							font-weight: normal;
+
+							&.title {
+								font-size: 2.6vw;
+								font-weight: 400;
+								padding-bottom: 10px;
+								border-bottom: 2px solid black;
+							}
+
+							&.content {
+								line-height: 1.3em;
+								margin-top: 5vh;
+							}
+						}
+					}
+				}
+
+			}		
+		}
 	}
 
 	&.section--shopinfo {
@@ -364,4 +429,69 @@
 		color: $color-section-content;
 	}
 
+}
+
+.section_link {
+
+	> * {
+		display: block;
+		margin: 1em 0 1em auto;
+		@media only screen and (max-width: 768px) {
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
+	.link {
+		font-size: 4.3vw;
+		width: fit-content;
+		padding: 20px 5vw;
+		border-radius: 30px;
+		margin-top: 2em;
+		background: $color-green1;
+		color: $color-white;
+		font-weight: bold;
+		border: 3px solid white;
+		box-shadow: 0px 3px 5px 2px rgba(34, 60, 80, 0.2);
+
+		p {
+			text-align: center;
+			line-height: 1.5em;
+
+			&.small {
+				font-size: 1.9vw;
+			}
+		}
+
+		&::before {
+			content: "";
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			z-index: 2;
+			background: transparent;
+			height: 8px;
+		}
+
+		&::after {
+			border-color: inherit;
+		}
+
+		&:hover {
+			background: $color-green2;
+			color: $color-gray1;
+		}
+
+		&.highlighted {
+			background: $color-green1;
+			color: $color-gray1;green2
+
+			&:hover {
+				background: $color-white;
+				color: $color-gray3;
+			}
+		}
+	}
 }
