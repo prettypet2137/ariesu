@@ -16,7 +16,7 @@
 	&.section--mainview {
 		font: $font-mainview;
 		color: $color-section-title;
-		height: 100vh;
+		min-height: 100vh;
 		background: url(../img/bg1.jpg) center center no-repeat;
 		background-size: cover;
 		padding: 48px;
@@ -75,11 +75,12 @@
 	}
 	
 	&.section--medal {
+		@include display-flex;
+		@include flex-direction-column;
 		color: $color-section-title;
 		background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/bg2.jpg) no-repeat;
 		background-size: cover;
-		@include display-flex;
-		@include flex-direction-column;
+		min-height: 100vh;
 		padding: 80px 40px 40px;
 
 		.section__title {
@@ -158,11 +159,12 @@
 	}
 	
 	&.section--earth {
+		@include display-flex;
+		@include flex-direction-column;
 		color: $color-section-title;
 		background: url(../img/bg3.jpg) top 20px center no-repeat;
 		background-size: cover;
-		@include display-flex;
-		@include flex-direction-column;
+		min-height: 100vh;
 		
 		.section__title {
 			text-align: center;
@@ -243,6 +245,7 @@
 		background-size: cover;
 		@include display-flex;
 		@include flex-direction-column;
+		min-height: 100vh;
 		margin-top: 1.2vh;
 		
 		.section__header {
@@ -483,26 +486,36 @@
 	}
 
 	&.section--shopinfo {
-		height: calc(100vh);
+		@include display-flex;
+		@include flex-direction-column;
+		min-height: 100vh;
 		background: url(../img/bg5.jpg) no-repeat;
 		background-size: cover;
 		color: $color-section-content;
 	}
 
 	&.section--industry {
-		height: calc(100vh);
+		@include display-flex;
+		@include flex-direction-column;
+		min-height: 100vh;
 		background: url(../img/bg7.jpg) no-repeat;
 		background-size: cover;
 		color: $color-section-content;
 	}
 
 	&.section--overview {
+		@include display-flex;
+		@include flex-direction-column;
+		min-height: 100vh;
 		background: url(../img/bg7.jpg) repeat;
 		background-size: cover;
 		color: $color-section-content;
 	}
 
 	&.section--qa {
+		@include display-flex;
+		@include flex-direction-column;
+		min-height: 100vh;
 		background: url(../img/bg8.png) repeat;
 		background-size: cover;
 		color: $color-section-content;

@@ -265,7 +265,7 @@ textarea:focus {
 .section.section--mainview {
   font: "Hiragino Mincho", "游ゴシック", YuGothic, "Yu Gothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", Arial, "メイリオ", Meiryo, sans-serif;
   color: #FFFFFF;
-  height: 100vh;
+  min-height: 100vh;
   background: url(../img/bg1.jpg) center center no-repeat;
   background-size: cover;
   padding: 48px;
@@ -362,9 +362,6 @@ textarea:focus {
   }
 }
 .section.section--medal {
-  color: #FFFFFF;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/bg2.jpg) no-repeat;
-  background-size: cover;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -377,6 +374,10 @@ textarea:focus {
   -moz-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  color: #FFFFFF;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/bg2.jpg) no-repeat;
+  background-size: cover;
+  min-height: 100vh;
   padding: 80px 40px 40px;
 }
 .section.section--medal .section__title h2 {
@@ -474,9 +475,6 @@ textarea:focus {
   }
 }
 .section.section--earth {
-  color: #FFFFFF;
-  background: url(../img/bg3.jpg) top 20px center no-repeat;
-  background-size: cover;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -489,6 +487,10 @@ textarea:focus {
   -moz-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  color: #FFFFFF;
+  background: url(../img/bg3.jpg) top 20px center no-repeat;
+  background-size: cover;
+  min-height: 100vh;
 }
 .section.section--earth .section__title {
   text-align: center;
@@ -602,6 +604,7 @@ textarea:focus {
   -moz-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  min-height: 100vh;
   margin-top: 1.2vh;
 }
 .section.section--store .section__header {
@@ -901,23 +904,73 @@ textarea:focus {
   }
 }
 .section.section--shopinfo {
-  height: 100vh;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-box-orient: vertical;
+  -moz-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 100vh;
   background: url(../img/bg5.jpg) no-repeat;
   background-size: cover;
   color: #000000;
 }
 .section.section--industry {
-  height: 100vh;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-box-orient: vertical;
+  -moz-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 100vh;
   background: url(../img/bg7.jpg) no-repeat;
   background-size: cover;
   color: #000000;
 }
 .section.section--overview {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-box-orient: vertical;
+  -moz-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 100vh;
   background: url(../img/bg7.jpg) repeat;
   background-size: cover;
   color: #000000;
 }
 .section.section--qa {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-box-orient: vertical;
+  -moz-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 100vh;
   background: url(../img/bg8.png) repeat;
   background-size: cover;
   color: #000000;
