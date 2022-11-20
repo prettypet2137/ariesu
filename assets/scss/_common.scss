@@ -264,16 +264,15 @@
 					@include display-flex;
 					@include align-items-center;
 					@include justify-content-center;
-					background: linear-gradient(90deg, rgba(139,86,43,1) 0%, rgba(228,168,0,1) 50%, rgba(139,86,43,1) 100%);
 					width: 70%;
 					text-align: center;
 					margin-left: -30px;
-					z-index: 1;
 	
 					h2 {
 						font-weight: bold;
 						color: $color-section-title;
 						font-size: 2.9vw;
+						z-index: 1;
 					}
 
 					&::before {
@@ -283,9 +282,13 @@
 						left: 0;
 						top: 0;
 						width: 100%;
-						z-index: 2;
-						background: linear-gradient(90deg, rgba(219,178,99,1) 0%, rgba(249,224,158,1) 50%, rgba(219,178,99,1) 100%);
-						height: 8px;
+						height: 100%;
+						background: transparent;
+						background: linear-gradient(90deg, rgba(139,86,43,1) 0%, rgba(228,168,0,1) 50%, rgba(139,86,43,1) 100%);
+						border-image: linear-gradient(90deg, rgba(219,178,99,1) 0%, rgba(249,224,158,1) 50%, rgba(219,178,99,1) 100%) 100% 1;
+						border-width: 8px;
+						border-style: solid;
+						box-sizing: border-box;
 					}
 
 					&::after {
@@ -293,11 +296,14 @@
 						display: block;
 						position: absolute;
 						left: 0;
-						bottom: 0;
+						top: 16px;
 						width: 100%;
-						z-index: 2;
-						background: linear-gradient(90deg, rgba(219,178,99,1) 0%, rgba(249,224,158,1) 50%, rgba(219,178,99,1) 100%);
-						height: 8px;
+						height: calc(100% - 32px);
+						background: transparent;
+						border-image: linear-gradient(90deg, rgba(219,178,99,1) 0%, rgba(249,224,158,1) 50%, rgba(219,178,99,1) 100%) 100% 1;
+						border-width: 3px;
+						border-style: solid;
+						box-sizing: border-box;
 					}
 				}
 			}
@@ -340,21 +346,78 @@
 
 		.section_content {
 
-			padding: 5vw;
-
 			.content-wrapper {
 
 				margin: 3vh 0 10vh 0;
 
 				.header {
+					@include display-flex;
+					@include justify-content-flex-start;
+					@include align-items(stretch);
+					position: relative;
 					color: $color-section-title;
-					margin-left: 10vw;
+					background: linear-gradient(90deg, rgba(26,45,96,1) 0%, rgba(27,65,151,1) 50%, rgba(26,45,96,1) 100%);
 					font-size: 3.6vw;
+					padding: 30px 10vw;
 
 					h3 {
-						text-shadow: -1px 3px #bbb;
-
+						text-shadow: -1px 1px #bbb;
 						span { margin-left: 20px; }
+					}
+
+					&::before {
+						content: "";
+						display: block;
+						position: absolute;
+						left: 0;
+						top: 5px;
+						width: 100%;
+						background: linear-gradient(90deg, rgba(219,178,99,1) 0%, rgba(249,224,158,1) 50%, rgba(219,178,99,1) 100%);
+						height: 5px;
+					}
+
+					&::after {
+						content: "";
+						display: block;
+						position: absolute;
+						left: 0;
+						bottom: 5px;
+						width: 100%;
+						background: linear-gradient(90deg, rgba(219,178,99,1) 0%, rgba(249,224,158,1) 50%, rgba(219,178,99,1) 100%);
+						height: 5px;
+					}
+				}
+
+				&:nth-child(even) { 
+					.header {
+						@include flex-direction-row-reverse;
+						margin: 0 0 0 20vw;
+						-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 4% 50%);
+						clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 5% 50%);
+					}
+				}
+
+				&:nth-child(odd) { 
+					.header {
+						@include flex-direction-row;
+						margin: 0 20vw 0 0;
+						-webkit-clip-path: polygon(100% 0%, 5% 50%, 100% 100%, 0 100%, 0 0);
+						clip-path: polygon(100% 0%, 95% 50%, 100% 100%, 0 100%, 0 0);
+					}
+				}
+
+				&:first-child { 
+					.header {
+						@include flex-direction-row;
+						background: transparent;
+						margin: 0 20vw 0 0;
+
+						h3 {
+							text-shadow: -1px 3px #bbb;
+						}
+							
+						&::before { content: none; }
+						&::after { content: none; }
 					}
 				}
 
@@ -363,14 +426,11 @@
 					@include flex-direction-row-reverse;
 					@include justify-content-flex-start;
 					@include align-items(stretch);
+					padding: 3vw;
 
-					figure {
+					.body_img {
 						width: 20vw;
-
-						img {    
-							position: absolute;
-							right: -5vw;
-						}
+						transform: translateX(5vw);
 					}
 
 					.description {
@@ -380,13 +440,21 @@
 						@include flex-direction-column;
 						margin-top: 10vh;
 
+						.description_img img {
+							width: 5vw;
+							height: auto;
+							position: absolute;
+							margin: 0;
+							transform: translateY(-90%);
+						}
+
 						p {
 							font-size: 2.1vw;
 							font-weight: normal;
 
 							&.title {
 								font-size: 2.6vw;
-								font-weight: 400;
+								font-weight: 500;
 								padding-bottom: 10px;
 								border-bottom: 2px solid black;
 							}
@@ -432,6 +500,7 @@
 }
 
 .section_link {
+	margin: auto;
 
 	> * {
 		display: block;
@@ -447,7 +516,6 @@
 		width: fit-content;
 		padding: 20px 5vw;
 		border-radius: 30px;
-		margin-top: 2em;
 		background: $color-green1;
 		color: $color-white;
 		font-weight: bold;
