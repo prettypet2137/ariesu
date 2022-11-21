@@ -11,7 +11,7 @@
 }
 
 .section {
-	font-size: 48px;
+	font-size: 3vw;
 
 	&.section--mainview {
 		font: $font-mainview;
@@ -784,15 +784,143 @@
 		background: url(../img/bg7.jpg) repeat;
 		background-size: cover;
 		color: $color-section-content;
+
+		.section_content {
+			.item {
+				@include display-flex;
+				@include flex-direction-column;
+				@include align-items-center;
+				margin: 10vh 0;
+
+				.title {
+					position: relative;
+					margin-bottom: 5vh;					
+
+					h2 {
+						position: absolute;
+						top: 42%;
+						left: 50%;
+						font-size: 3.5vw;
+						text-align: center;
+						font-weight: normal;
+						transform: translateX(-50%) translateY(-50%);
+					}
+
+					img {
+						width: 60vw;
+					}
+
+				}
+
+				.content {
+					width: 100%;
+					padding: 30px;
+
+					.row {
+						@include display-flex;
+
+						span { 
+							background-color: white; padding: 10px; 
+							margin: 4px 8px;
+							&.caption { flex: 33%; text-align: center;}
+							&.description { 
+								flex: 66%; text-align: center; 
+								font { font-size: 2vw; } 
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 
 	&.section--qa {
-		@include display-flex;
-		@include flex-direction-column;
-		min-height: 100vh;
+		color: $color-section-content;
 		background: url(../img/bg8.png) repeat;
 		background-size: cover;
-		color: $color-section-content;
+
+		.section__qa {
+			margin: 5vw;
+			padding: 4vh 6vw;
+			background: white;
+			border: 1px solid black;
+
+			.section__title {
+				text-align: center;
+				padding: 24px 0;
+				border-bottom: 1px solid black;
+			}
+
+			.section__content {
+				margin: 5vh 0;
+
+				ul {
+					list-style-type: none;
+
+					li {
+						padding: 24px 0;
+						border-bottom: 1px solid black;
+
+						p {
+							line-height: 1.5em;
+						}
+
+						.question {
+							position: relative;
+							padding: 0px 6vw;
+
+							&::before {
+								content: "Q";
+								position: absolute;
+								left: 0;
+								font-weight: bold;
+							}
+
+							.qa-opener {
+								position: absolute;
+								top: 0;
+								right: 0;
+								text-align: center;
+								font-weight: bold;
+								width: 30px;
+								height: 30px;
+
+								&:before {
+									content: '+';
+									font-size: 2.8vw;
+									display: block;
+									@include transition-all;
+								}
+				
+								&.opened:before {
+									content: "|";
+									@include transform(rotate(90deg));
+									font-size: 1.6vw;
+									font-weight: bolder;
+									margin-top: 8px;
+								}
+							}
+
+							.qa-popup {
+								display: none;
+							}
+						}
+
+						.answer {
+							position: relative;
+							padding: 0px 6vw;
+
+							&::before {
+								content: "A";
+								position: absolute;
+								left: 0;
+								font-weight: bold;
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 
 }

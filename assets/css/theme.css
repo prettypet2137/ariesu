@@ -260,7 +260,7 @@ textarea:focus {
 }
 
 .section {
-  font-size: 48px;
+  font-size: 3vw;
 }
 .section.section--mainview {
   font: "Hiragino Mincho", "游ゴシック", YuGothic, "Yu Gothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", Arial, "メイリオ", Meiryo, sans-serif;
@@ -1248,7 +1248,7 @@ textarea:focus {
   background-size: cover;
   color: #000000;
 }
-.section.section--qa {
+.section.section--overview .section_content .item {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -1261,10 +1261,133 @@ textarea:focus {
   -moz-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 100vh;
+  -webkit-box-align: center;
+  -webkit-flex-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  margin: 10vh 0;
+}
+.section.section--overview .section_content .item .title {
+  position: relative;
+  margin-bottom: 5vh;
+}
+.section.section--overview .section_content .item .title h2 {
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  font-size: 3.5vw;
+  text-align: center;
+  font-weight: normal;
+  transform: translateX(-50%) translateY(-50%);
+}
+.section.section--overview .section_content .item .title img {
+  width: 60vw;
+}
+.section.section--overview .section_content .item .content {
+  width: 100%;
+  padding: 30px;
+}
+.section.section--overview .section_content .item .content .row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+.section.section--overview .section_content .item .content .row span {
+  background-color: white;
+  padding: 10px;
+  margin: 4px 8px;
+}
+.section.section--overview .section_content .item .content .row span.caption {
+  flex: 33%;
+  text-align: center;
+}
+.section.section--overview .section_content .item .content .row span.description {
+  flex: 66%;
+  text-align: center;
+}
+.section.section--overview .section_content .item .content .row span.description font {
+  font-size: 2vw;
+}
+.section.section--qa {
+  color: #000000;
   background: url(../img/bg8.png) repeat;
   background-size: cover;
-  color: #000000;
+}
+.section.section--qa .section__qa {
+  margin: 5vw;
+  padding: 4vh 6vw;
+  background: white;
+  border: 1px solid black;
+}
+.section.section--qa .section__qa .section__title {
+  text-align: center;
+  padding: 24px 0;
+  border-bottom: 1px solid black;
+}
+.section.section--qa .section__qa .section__content {
+  margin: 5vh 0;
+}
+.section.section--qa .section__qa .section__content ul {
+  list-style-type: none;
+}
+.section.section--qa .section__qa .section__content ul li {
+  padding: 24px 0;
+  border-bottom: 1px solid black;
+}
+.section.section--qa .section__qa .section__content ul li p {
+  line-height: 1.5em;
+}
+.section.section--qa .section__qa .section__content ul li .question {
+  position: relative;
+  padding: 0px 6vw;
+}
+.section.section--qa .section__qa .section__content ul li .question::before {
+  content: "Q";
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+.section.section--qa .section__qa .section__content ul li .question .qa-opener {
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: center;
+  font-weight: bold;
+  width: 30px;
+  height: 30px;
+}
+.section.section--qa .section__qa .section__content ul li .question .qa-opener:before {
+  content: "+";
+  font-size: 2.8vw;
+  display: block;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.section.section--qa .section__qa .section__content ul li .question .qa-opener.opened:before {
+  content: "|";
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  font-size: 1.6vw;
+  font-weight: bolder;
+  margin-top: 8px;
+}
+.section.section--qa .section__qa .section__content ul li .question .qa-popup {
+  display: none;
+}
+.section.section--qa .section__qa .section__content ul li .answer {
+  position: relative;
+  padding: 0px 6vw;
+}
+.section.section--qa .section__qa .section__content ul li .answer::before {
+  content: "A";
+  position: absolute;
+  left: 0;
+  font-weight: bold;
 }
 
 .section_link {
