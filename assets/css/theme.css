@@ -1314,7 +1314,7 @@ textarea:focus {
 .section.section--qa {
   color: #000000;
   background: url(../img/bg8.png) repeat;
-  background-size: cover;
+  background-size: contain;
 }
 .section.section--qa .section__qa {
   margin: 5vw;
@@ -1443,7 +1443,7 @@ textarea:focus {
   background: #13c108;
   color: #191819;
 }
-green2 .section_link .link.highlighted:hover {
+.section_link .link.highlighted:hover {
   background: #FFFFFF;
   color: #797979;
 }

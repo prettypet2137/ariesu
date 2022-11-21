@@ -837,7 +837,7 @@
 	&.section--qa {
 		color: $color-section-content;
 		background: url(../img/bg8.png) repeat;
-		background-size: cover;
+		background-size: contain;
 
 		.section__qa {
 			margin: 5vw;
@@ -980,7 +980,7 @@
 
 		&.highlighted {
 			background: $color-green1;
-			color: $color-gray1;green2
+			color: $color-gray1;
 
 			&:hover {
 				background: $color-white;
