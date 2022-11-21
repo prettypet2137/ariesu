@@ -14,50 +14,53 @@
 	font-size: 3vw;
 
 	&.section--mainview {
-		font: $font-mainview;
+		font-family: $font-mainview;
 		color: $color-section-title;
 		min-height: 100vh;
 		background: url(../img/bg1.jpg) center center no-repeat;
 		background-size: cover;
-		padding: 48px;
+		padding: 2.71vw;
 		@include display-flex;
 		@include flex-direction-column-reverse;
 		@include align-items-flex-start;
 		@include justify-content-space-between;
 
 		.top-banner-title {
-			font-size: 40px;
 			font-weight: bolder;
 			letter-spacing: -2px;
 
-			.subtitle { font-size: 36px; float: right; }
+			.subtitle { 
+				font-size: 3.81vw;
+				float: right; 
+			}
 
 			.subtitle--large {
+				font-size: 9.3vw;
 				background: url(../img/light.png) left top no-repeat, url(../img/light.png) right -20px bottom 40px no-repeat;
 
 				p {text-shadow: 10px 5px black; line-height: 1.2em;}
 
 				.slogan {
-					margin-left: 8vw;
+					margin-left: 7.29vw;
 					label:nth-child(even) { position: relative; top: 16px; }
 					label:nth-child(odd) { position: relative; top: 0; }
 					label:last-child { position: relative; top: 16px; }
 				}
 
 				@media only screen and (min-width: 768px) {
-					font-size: 80px;
+					font-size: 9.3vw;
 					p {text-shadow: 5px 2px black; line-height: 1em;}
 				}
 			}
 
 			@media only screen and (min-width: 768px) {
 				font-size: 80px;
-				.subtitle { font-size: 48px; line-height: 1.5em;}
+				.subtitle { font-size: 3.81vw; line-height: 1.5em;}
 			}
 		}
 
 		.top-banner-description {
-			font-size: 24px;
+			font-size: 3.04vw;
 			top: 50px;
 			left: 0px;
 			position: absolute;
@@ -68,7 +71,7 @@
 
 			@media only screen and (min-width: 768px) {
 				top: 20px;
-				font-size: 48px;
+				font-size: 3.04vw;
 			}
 		}
 		
@@ -162,7 +165,6 @@
 		color: $color-section-title;
 		background: url(../img/bg3.jpg) top 20px center no-repeat;
 		background-size: cover;
-		min-height: 100vh;
 		
 		.section__title {
 			text-align: center;
@@ -349,7 +351,7 @@
 
 			.content-wrapper {
 
-				margin: 3vh 0 10vh 0;
+				margin: 3vh 0 5vh 0;
 
 				.header {
 					@include display-flex;
@@ -411,7 +413,7 @@
 					.header {
 						@include flex-direction-row;
 						background: transparent;
-						margin: 0 20vw 5vh 0;
+						margin: 0 20vw 3vh 0;
 
 						h3 {
 							text-shadow: -1px 3px #bbb;
@@ -465,7 +467,7 @@
 
 						&.content {
 							line-height: 1.3em;
-							margin-top: 5vh;
+							margin-top: 2em;
 							width: 80vw;
 
 							@media only screen and (max-width: 1000px) {
@@ -497,6 +499,10 @@
 			background: url(../img/bg5.jpg) left 0 top -280px no-repeat;
 			color: $color-section-title;
 			padding: 10vh 0 8vh 0;
+
+			@media only screen and (min-width: 1920px) {
+				background-size: cover;
+			}
 
 			figure {
 				position: absolute;
@@ -540,7 +546,7 @@
 				
 			.content-wrapper {
 
-				margin-bottom: 15vh;
+				margin-bottom: 5vh;
 
 				.header {
 					@include display-flex;
@@ -556,7 +562,6 @@
 					.header--number {
 						position: relative;
 						width: 25vw;
-						height: 100%;
 						margin-top: -10px;
 
 						.circle--number {
@@ -692,7 +697,7 @@
 		
 								&.description {
 									line-height: 1.3em;
-									margin-top: 5vh;
+									margin-top: 2em;
 									padding: 2vh 3vw;
 									width: 80%;
 		
@@ -836,8 +841,7 @@
 
 	&.section--qa {
 		color: $color-section-content;
-		background: url(../img/bg8.png) repeat;
-		background-size: contain;
+		background: url(../img/bg8.png) no-repeat;
 
 		.section__qa {
 			margin: 5vw;
@@ -909,6 +913,7 @@
 						.answer {
 							position: relative;
 							padding: 0px 6vw;
+							display: none;
 
 							&::before {
 								content: "A";

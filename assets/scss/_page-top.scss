@@ -8,14 +8,19 @@
     top: 0;
     z-index: 9;
 
-	.header-inner {
-		width: 400px;
-		padding: 5% 10%;
-	}
-
 	.logo {
 		float: right;
-		img { display: inline; height: 5vw; }
+		margin: 1vw;
+		
+		.logo1 { 
+			display: inline; 
+			width: 9.48vw; 
+		}
+		.logo2 { 
+			display: inline; 
+			width: 14.7vw; 
+			margin-left: -1.3vw;
+		}
 	}
 
 }
