@@ -743,55 +743,16 @@
 
 	
 	&.section--industry {
-		@include display-flex;
-		@include flex-direction-column;
-		color: $color-section-title;
 		background: url(../img/bg6.jpg) no-repeat;
-		background-size: cover;
-		padding: 80px 40px 40px;
-
-		.section__title {
-			h2 {
-				font-size: 40px;
-				line-height: 1.3em;
-				font-weight: bold;
-				margin-bottom: 4vh;
-				text-align: center;
-
-				@media only screen and (min-width: 768px) {
-					font-size: 3.5vw;
-				}
-			}
-		}
 
 		.section__content {
-			font-size: 3.5vw;
-
-			.industry-list {
-				@include display-flex;
-				@include justify-content-flex-start;
-				list-style: none;
-
-				@media only screen and (max-width: 768px) {
-					@include flex-direction-column;
-				}
-				
+			.industry-list {				
 				.item {
-					@include display-flex;
-					@include align-items-center;
-					@include justify-content-center;
 					background: url(../img/circle.png) center center no-repeat;
 					background-size: 80vw;
-					text-align: center;
-					width: 100%;
-					height: 80vw;
-					padding: 50px;
-					position: relative;
 
 					@media only screen and (min-width: 768px) {
 						background-size: 30vw;
-						width: 33.33%;
-						height: 30vw;
 					}
 
 					figure {
