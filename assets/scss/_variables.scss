@@ -120,6 +120,10 @@ $font-size-main-panel-title-sp: $font-size-xxxxxxxl-sp;
     @include align-items(flex-start);
 }
 
+@mixin align-items-flex-end {
+    @include align-items(flex-end);
+}
+
 @mixin align-items($v) {
     -webkit-box-align: $v;
     -webkit-flex-align: $v;
